@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevClub Jokenpô</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="container">
+        <h1>Jo Ken Pô</h1>
+
+        <div class="buttons">
+            <button id="rock" onclick='playHuman("rock")'>&#9994</button>
+            <button id="paper" onclick='playHuman("paper")'>&#128400</button>
+            <button id="scissors" onclick='playHuman("scissors")'>&#9996</button>
+        </div>
+
+        <div>
+            <p id="result">...</p>
+            <p class="your-score">Sua pontuação: <span id="human-score">0</span></p>
+            <p class="machine">Pontuação do Ban: <span id="machine-score">0</span> </p>
+
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
