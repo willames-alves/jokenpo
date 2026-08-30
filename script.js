@@ -3,8 +3,13 @@ const yourScore = document.querySelector("#human-score")
 const machineScore = document.querySelector("#machine-score")
 
 
-
 const counter = { machineCounter: 0, humanCounter: 0 }
+
+const GAME_OPTIONS = {
+    ROCK: 'rock',
+    PAPER: 'paper',
+    SCISSORS: 'scissors'
+}
 
 function playHuman(humanChoise) {
     PlayGame(humanChoise, PlayMachine())
@@ -12,7 +17,9 @@ function playHuman(humanChoise) {
 }
 
 function PlayMachine() {
-    const choices = ["rock", 'paper', 'scissors']
+
+    result.innerHTML = "..."
+    const choices = [GAME_OPTIONS.ROCK, GAME_OPTIONS.PAPER, GAME_OPTIONS.SCISSORS]
     const randomNuber = Math.floor(Math.random() * 3)
 
     return choices[randomNuber]
@@ -23,9 +30,9 @@ function PlayMachine() {
 function PlayGame(humanChoise, machineChoise) {
 
     const comparisons = {
-        rock: humanChoise === "rock" && machineChoise === "scissors",
-        paper: humanChoise === "paper" && machineChoise === "rock",
-        scissors: humanChoise === "scissors" && machineChoise === "paper"
+        rock: humanChoise === GAME_OPTIONS.ROCK && machineChoise === GAME_OPTIONS.SCISSORS,
+        paper: humanChoise === GAME_OPTIONS.PAPER && machineChoise === GAME_OPTIONS.ROCK,
+        scissors: humanChoise === GAME_OPTIONS.SCISSORS && machineChoise === GAME_OPTIONS.PAPER
 
 
     }
